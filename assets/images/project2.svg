@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+  <rect width="100%" height="100%" fill="#04121a"/>
+  <defs>
+    <linearGradient id="g2" x1="0" x2="1">
+      <stop offset="0" stop-color="#7a5dff"/>
+      <stop offset="1" stop-color="#6ef3ff"/>
+    </linearGradient>
+  </defs>
+  <rect x="40" y="40" width="720" height="370" rx="14" fill="#081028" stroke="#ffffff10"/>
+  <g fill="url(#g2)" font-family="Inter, sans-serif" font-size="28" font-weight="700">
+    <text x="120" y="220">Micro-interactions Library</text>
+  </g>
+</svg>

@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description"
+        content="Premium frontend developer portfolio — dark futuristic, glassmorphism, GSAP animations." />
+    <title>Frontend Developer Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GSAP (animation library) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+
+    <!-- Main JS -->
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <div id="app" class="app">
+
+        <!-- Floating blobs / background -->
+        <div class="blobs" aria-hidden="true">
+            <div class="blob b1"></div>
+            <div class="blob b2"></div>
+            <div class="blob b3"></div>
+        </div>
+
+        <!-- Custom cursor glow -->
+        <div id="cursor" class="cursor" aria-hidden="true"></div>
+
+        <header class="nav">
+            <div class="container nav-inner">
+                <a class="logo" href="#">Sam Dev</a>
+                <nav class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#contact" class="cta">Contact</a>
+                </nav>
+                <button class="nav-toggle" aria-label="Open menu">☰</button>
+            </div>
+        </header>
+
+        <main>
+            <!-- HERO SECTION -->
+            <section id="hero" class="section hero">
+                <div class="container hero-grid">
+                    <div class="hero-content">
+                        <h1 class="title">
+                            <span class="reveal">Hi, I'm</span>
+                            <span class="reveal name">Somil<span class="accent"> Barnwal</span></span>
+                        </h1>
+
+                        <h2 class="subtitle">
+                            <span id="typed" aria-hidden="true"></span>
+                            <span class="sr-only">Frontend Developer — UI/UX & Animations</span>
+                        </h2>
+
+                        <p class="lead">I build immersive, high-performance web interfaces using modern JS, CSS and
+                            motion design.</p>
+
+                        <div class="hero-ctas">
+                            <a href="#projects" class="btn btn-primary magnetic">See Projects</a>
+                            <a href="#contact" class="btn btn-ghost magnetic">Hire Me</a>
+                        </div>
+                    </div>
+
+                    <!-- Animated profile card -->
+                    <aside class="profile-card">
+                        <div class="card-glass">
+                            <div class="avatar-wrap">
+                                <!-- Lazy-loaded SVG placeholder -->
+                                <img src="assets/images/avatar.svg" alt="Profile photo" loading="lazy">
+                            </div>
+                            <div class="card-info">
+                                <h3>Somil Kumar Barnwal</h3>
+                                <p>Frontend Developer</p>
+                                <div class="socials">
+                                    <a href="#">GitHub</a>
+                                    <a href="#">Dribbble</a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- ABOUT SECTION -->
+<section id="about" class="section about">
+    <div class="container about-grid">
+
+        <!-- Left Side -->
+        <div class="about-content">
+            <h2 class="section-title">About Me</h2>
+
+            <p class="about-intro">
+                Hi, I'm Somil Kumar Barnwal, a passionate Frontend Developer
+                focused on building modern, responsive and user-friendly web
+                applications.
+            </p>
+
+            <p>
+                I enjoy creating beautiful interfaces using HTML, CSS,
+                JavaScript and modern frontend technologies. Currently I am
+                improving my development skills and working on real-world
+                projects to become a professional web developer.
+            </p>
+
+            <a href="#contact" class="btn btn-primary">
+                Let's Connect
+            </a>
+        </div>
+
+        <!-- Right Side -->
+        <div class="stats-grid">
+            <div class="stat card-glass">
+                <h3>10+</h3>
+                <p>Projects Built</p>
+            </div>
+
+            <div class="stat card-glass">
+                <h3>100+</h3>
+                <p>Hours Learning</p>
+            </div>
+
+            <div class="stat card-glass">
+                <h3>2026</h3>
+                <p>Frontend Journey</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+            <!-- SKILLS SECTION -->
+            <section id="skills" class="section skills">
+                <div class="container">
+                    <h2 class="section-title">Skills</h2>
+
+                    <div class="skills-grid">
+                        <!-- Skill card example - will be repeated in markup for demo -->
+                        <div class="skill card-glass">
+                            <h4>HTML & CSS</h4>
+                            <div class="progress" data-progress="95">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill card-glass">
+                            <h4>JavaScript</h4>
+                            <div class="progress" data-progress="92">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill card-glass">
+                            <h4>GSAP / Motion</h4>
+                            <div class="progress" data-progress="90">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill card-glass">
+                            <h4>Accessibility</h4>
+                            <div class="progress" data-progress="88">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROJECTS SECTION -->
+            <section id="projects" class="section projects">
+                <div class="container">
+                    <h2 class="section-title">Projects</h2>
+
+                    <div class="projects-grid">
+                        <!-- Project card -->
+                        <article class="project card-glass">
+                            <div class="project-media">
+                                <img data-src="assets/images/project1.svg" alt="Project 1" class="lazy" loading="lazy">
+                            </div>
+                            <div class="project-body">
+                                <h3>Interactive Dashboard</h3>
+                                <p>High-performance UI with realtime data visualization.</p>
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-sm">Live Demo</a>
+                                    <a href="#" class="btn btn-sm ghost">GitHub</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project card-glass">
+                            <div class="project-media">
+                                <img data-src="assets/images/project2.svg" alt="Project 2" class="lazy" loading="lazy">
+                            </div>
+                            <div class="project-body">
+                                <h3>Micro-interactions Library</h3>
+                                <p>Reusable motion components powered by GSAP.</p>
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-sm">Live Demo</a>
+                                    <a href="#" class="btn btn-sm ghost">GitHub</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- EXPERIENCE TIMELINE -->
+            <section id="experience" class="section experience">
+                <div class="container">
+                    <h2 class="section-title">Experience</h2>
+                    <div class="timeline">
+                        <div class="timeline-item card-glass">
+                            <div class="timeline-date">2024 - Present</div>
+                            <div class="timeline-body">
+                                <h4>Senior Frontend Engineer</h4>
+                                <p>Leading frontend architecture and motion systems.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item card-glass">
+                            <div class="timeline-date">2020 - 2024</div>
+                            <div class="timeline-body">
+                                <h4>Frontend Developer</h4>
+                                <p>Built production-grade web apps for startups.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="section contact">
+                <div class="container">
+                    <h2 class="section-title">Contact</h2>
+                    <div class="contact-grid">
+                        <form class="contact-form card-glass" id="contactForm">
+                            <label class="form-row">
+                                <span>Name</span>
+                                <input type="text" name="name" required>
+                            </label>
+                            <label class="form-row">
+                                <span>Email</span>
+                                <input type="email" name="email" required>
+                            </label>
+                            <label class="form-row">
+                                <span>Message</span>
+                                <textarea name="message" rows="5" required></textarea>
+                            </label>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary magnetic">Send Message</button>
+                            </div>
+                        </form>
+
+                        <aside class="contact-info">
+                            <div class="card-glass social-list">
+                                <h3>Let's connect</h3>
+                                <p>Email: hello@samdev.io</p>
+                                <div class="socials">
+                                    <a href="#">LinkedIn</a>
+                                    <a href="#">Twitter</a>
+                                    <a href="#">GitHub</a>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <p>© <span id="year"></span> Somil Barnwal — Frontend Developer</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
