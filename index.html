@@ -39,7 +39,7 @@
 
         <header class="nav">
             <div class="container nav-inner">
-                <a class="logo" href="#">Sam Dev</a>
+                <a class="logo" href="#">Somil Barnwal</a>
                 <nav class="nav-links">
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
@@ -86,8 +86,8 @@
                                 <h3>Somil Kumar Barnwal</h3>
                                 <p>Frontend Developer</p>
                                 <div class="socials">
-                                    <a href="#">GitHub</a>
-                                    <a href="#">Dribbble</a>
+                                    <a href="https://www.github.com/somil-kumar-barnwal" target="_blank" rel="noopener noreferrer">GitHub</a>
+                                    <a href="https://www.linkedin.com/in/somil-kumar-barnwal-a5b997374/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +134,7 @@
                         </div>
 
                         <div class="stat card-glass">
-                            <h3>2026</h3>
+                            <h3>2025</h3>
                             <p>Frontend Journey</p>
                         </div>
                     </div>
@@ -189,7 +189,8 @@
                         <!-- Project card -->
                         <article class="project card-glass">
                             <div class="project-media">
-                                <img data-src="assets/images/project1.svg" alt="Project 1" class="lazy" loading="lazy">
+                                <img src="./assets/images/Screenshot 2026-05-24 091315.png" alt="Project 1" class="lazy"
+                                    loading="lazy">
                             </div>
                             <div class="project-body">
                                 <h3>Interactive Dashboard</h3>
@@ -203,11 +204,12 @@
 
                         <article class="project card-glass">
                             <div class="project-media">
-                                <img data-src="assets/images/project2.svg" alt="Project 2" class="lazy" loading="lazy">
+                                <img src="./assets/images/Screenshot 2026-05-24 092504.png" alt="Project 2" class="lazy"
+                                    loading="lazy">
                             </div>
                             <div class="project-body">
-                                <h3>Micro-interactions Library</h3>
-                                <p>Reusable motion components powered by GSAP.</p>
+                                <h3>Cake Website</h3>
+                                <p>A responsive website for a local cake shop with an online ordering system.</p>
                                 <div class="project-actions">
                                     <a href="#" class="btn btn-sm">Live Demo</a>
                                     <a href="#" class="btn btn-sm ghost">GitHub</a>
@@ -277,9 +279,10 @@
 
                         <!-- Certificate 4 -->
                         <div class="certificate-card card-glass">
-                            <img src="assets/images/techfest ambesder program.png" alt="Certificate 4" class="certificate-image">
+                            <img src="assets/images/techfest ambesder program.png" alt="Certificate 4"
+                                class="certificate-image">
 
-                            <h3>Web Development</h3>
+                            <h3>Techfest Ambesder Program</h3>
                             <p>Techfest Ambesder Program</p>
                         </div>
 
@@ -314,11 +317,13 @@
                         <aside class="contact-info">
                             <div class="card-glass social-list">
                                 <h3>Let's connect</h3>
-                                <p>Email: hello@samdev.io</p>
+                                <p>Email: somilraj55@gmail.com</p>
                                 <div class="socials">
-                                    <a href="#">LinkedIn</a>
-                                    <a href="#">Twitter</a>
-                                    <a href="#">GitHub</a>
+                                    <a href="https://www.linkedin.com/in/somil-kumar-barnwal-a5b997374/" target="_blank"
+                                        rel="noopener noreferrer">LinkedIn</a>
+                                    <a href="https://x.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+                                    <a href="https://github.com/somilraj55" target="_blank"
+                                        rel="noopener noreferrer">GitHub</a>
                                 </div>
                             </div>
                         </aside>
@@ -339,6 +344,21 @@
             class="btn">
             Live Demo
         </a>
+
+
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const menuBtn = document.querySelector('.nav-toggle');
+                const navLinks = document.querySelector('.nav-links');
+
+                console.log(menuBtn);
+                console.log(navLinks);
+
+                menuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            });
+        </script>
 
     </div>
 </body>

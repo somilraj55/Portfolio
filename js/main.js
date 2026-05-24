@@ -17,24 +17,43 @@ window.addEventListener('load', () => {
         navLinks.classList.toggle('open');
     });
 
-    // Typing effect (simple, optimized)
     const typedEl = document.getElementById('typed');
-    const phrases = ['Frontend Developer', 'Motion Designer', 'UI Engineer', 'Performance Enthusiast'];
-    let p = 0, char = 0, forward = true;
-    function tick() {
-        if (!typedEl) return;
-        const str = phrases[p];
-        typedEl.textContent = str.slice(0, char) + (Math.floor(Date.now() / 300) % 2 ? '|' : '\u00A0');
-        if (forward) {
-            if (char < str.length) char++;
-            else forward = false;
+const phrases = [
+    'Frontend Developer',
+    'Motion Designer',
+    'UI Engineer',
+    'Performance Enthusiast'
+];
+
+let p = 0;
+let char = 0;
+let forward = true;
+
+function tick() {
+    if (!typedEl) return;
+
+    const str = phrases[p];
+    typedEl.textContent = str.slice(0, char) + "|";
+
+    if (forward) {
+        if (char < str.length) {
+            char++;
         } else {
-            if (char > 0) char--;
-            else { forward = true; p = (p + 1) % phrases.length; }
+            forward = false;
         }
-        requestAnimationFrame(tick);
+    } else {
+        if (char > 0) {
+            char--;
+        } else {
+            forward = true;
+            p = (p + 1) % phrases.length;
+        }
     }
-    tick();
+
+    setTimeout(tick, 30); // speed control
+}
+
+tick();
 
     // Floating blobs parallax
     const blobs = document.querySelectorAll('.blob');
@@ -160,9 +179,3 @@ window.addEventListener('load', () => {
 });
 
 
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
