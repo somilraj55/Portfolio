@@ -93,8 +93,8 @@ body {
 }
 
 .nav-links{
-    display:flex !important;
-    gap:5rem !important; 
+    justify-content: space-between;
+    width: 70%;
 }
 
 
